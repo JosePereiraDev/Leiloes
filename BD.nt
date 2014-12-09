@@ -1,0 +1,45 @@
+BD{
+
+	--- ANTES
+
+	Bidders{
+		-> Creditos
+		-> Nomes
+	}
+
+	Licitação{
+		-> Bidder
+		-> id_licitação
+		-> id_produto
+		-> valor_oferecido
+	}
+
+	Produto{
+		-> desc_produto
+		-> id_produto
+		-> status
+		-> valor_base
+	}
+
+	-- DEPOIS
+
+	BDDRS{
+		-> BDDRS_ID
+		-> BDDRS_NOME
+		-> BDDRS_CRDTS
+	}
+
+	LCTC{
+		-> LCTC_ID
+		-> LCTC_BDDRS
+		-> LCTC_PROD
+		-> LCTC_VLOFER
+	}
+
+	PRDCT{
+		-> PRDCT_ID
+		-> PRDCT_VLBASE
+		-> PRDCT_STATUS
+		-> PRDCT_DESC
+	}
+}
